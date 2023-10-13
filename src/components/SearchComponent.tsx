@@ -9,7 +9,7 @@ const SearchComponent = () => {
         <>
             <Grid container spacing={2} paddingLeft={0} paddingRight={0} >
                 <Grid item xs={10} >
-                    <TextField id="outlined-basic" label="Szukaj bilety" variant="outlined"
+                    <TextField id="outlined-basic" label="Szukaj biletu" variant="outlined"
                                fullWidth
                                InputProps={{
                                    endAdornment: (
@@ -35,7 +35,7 @@ const SearchComponent = () => {
             >
                 <Grid alignItems="center" style={{ display: "flex" }}>
                     <Button fullWidth variant="text" style={{fontWeight: "bold", color: "#00bfff", fontSize: 17, borderColor: 'grey.300'}}
-                            startIcon={<AddIcon fontSize={"large"} style={{ color: "orange" }}/>}>
+                            startIcon={<AddIcon fontSize={"large"} style={{ color: "orange"}}/>}>
                         DODAJ BILET OKRESOWY
                     </Button>
                 </Grid>

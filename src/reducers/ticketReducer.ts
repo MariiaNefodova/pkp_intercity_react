@@ -10,8 +10,8 @@ type initialStateType = {
 const ticketList: TicketState[] = [
     {
         number: 'XX590455622',
-        dateStart: new Date('11/08/22 13:11'),
-        dateEnd: new Date('11/08/22 17:34'),
+        dateStart: new Date('2022-08-11 13:11'),
+        dateEnd: new Date('2022-08-11 17:34'),
         class: '1',
         from: 'Warszawa Centr.',
         to: 'Kraków Gł.',
