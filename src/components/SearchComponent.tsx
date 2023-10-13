@@ -1,21 +1,8 @@
 import {Box, Button, Grid, InputAdornment, Tab, Tabs, TextField, Theme, Typography} from "@mui/material";
 import React from "react";
 import SearchIcon from '@mui/icons-material/Search';
-import MenuIcon from '@mui/icons-material/Menu';
+import TuneIcon from '@mui/icons-material/Tune';
 import AddIcon from '@mui/icons-material/Add';
-//import { styled } from '@mui/system';
-//import {createStyles, makeStyles} from "@mui/styles";
-//import bookList from "../views/bookList";
-
-
-// const useStyles = makeStyles((theme: Theme) =>
-//     createStyles({
-//         input: {
-//             height: 45
-//         }
-//     })
-// );
-
 
 const SearchComponent = () => {
     return (
@@ -34,7 +21,7 @@ const SearchComponent = () => {
                 </Grid>
                 <Grid item xs={2} alignItems="stretch" style={{ display: "flex" }}>
                     <Button fullWidth variant="outlined" style={{fontWeight: "bold", color: "navy", fontSize: 18}}
-                            endIcon={<MenuIcon style={{ color: "navy" }} />}>
+                            sx={{ borderColor: 'grey.300' }} endIcon={<TuneIcon style={{ color: "navy" }} />}>
                         FILTRY
                     </Button>
                 </Grid>
@@ -47,69 +34,14 @@ const SearchComponent = () => {
                 justifyContent="flex-end"
             >
                 <Grid alignItems="center" style={{ display: "flex" }}>
-                    <AddIcon fontSize={"large"} style={{ color: "orange" }}/>
-                    <Typography color={"#00bfff"} fontWeight={"bold"} fontSize={17}>
-                    DODAJ BILET OKRESOWY
-                </Typography>
+                    <Button fullWidth variant="text" style={{fontWeight: "bold", color: "#00bfff", fontSize: 17, borderColor: 'grey.300'}}
+                            startIcon={<AddIcon fontSize={"large"} style={{ color: "orange" }}/>}>
+                        DODAJ BILET OKRESOWY
+                    </Button>
                 </Grid>
             </Grid>
 
         </>
-        //     flexDirection="row"
-        //     justifyContent="space-between"
-        //     alignItems="center"
-        //     width="100%"
-        //     as="nav"
-        //     p={4}
-        //     mx="auto"
-        //     maxWidth="1150px"
-        // >
-        //     <Box>
-        //         <Link to="/">
-        //             <Button
-        //                 fontWeight={['medium', 'medium', 'medium']}
-        //                 fontSize={['xs', 'sm', 'lg', 'xl']}
-        //                 variant="ghost"
-        //                 _hover={{ bg: 'rgba(0,0,0,.2)' }}
-        //                 padding="1"
-        //                 color="white"
-        //                 letterSpacing="0.65px"
-        //             >
-        //                 <Text fontSize={['xl', '2xl', '2xl', '2xl']} mr={2}>
-        //                     🦉
-        //                 </Text>
-        //                 Library App
-        //             </Button>
-        //         </Link>
-        //     </Box>
-        //
-        //     <Box>
-        //         <Link to="/">
-        //             <Button
-        //                 fontWeight={['medium', 'medium', 'medium']}
-        //                 fontSize={['xs', 'sm', 'lg', 'xl']}
-        //                 variant="ghost"
-        //                 _hover={{ bg: 'rgba(0,0,0,.2)' }}
-        //                 p={[1, 4]}
-        //                 color="white"
-        //             >
-        //                 List Books
-        //             </Button>
-        //         </Link>
-        //         <Link to="/add-new-book">
-        //             <Button
-        //                 fontWeight={['medium', 'medium', 'medium']}
-        //                 fontSize={['xs', 'sm', 'lg', 'xl']}
-        //                 variant="ghost"
-        //                 _hover={{ bg: 'rgba(0,0,0,.2)' }}
-        //                 p={[1, 4]}
-        //                 color="white"
-        //             >
-        //                 Add Book
-        //             </Button>
-        //         </Link>
-        //     </Box>
-        // </Flex>
     );
 };
 
