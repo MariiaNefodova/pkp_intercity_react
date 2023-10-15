@@ -1,19 +1,21 @@
 {
   "files": {
     "main.css": "/pkp_intercity_react/static/css/main.26a2976c.css",
-    "main.js": "/pkp_intercity_react/static/js/main.e7ab6117.js",
+    "main.js": "/pkp_intercity_react/static/js/main.b78af656.js",
     "static/js/787.b1ff8b5a.chunk.js": "/pkp_intercity_react/static/js/787.b1ff8b5a.chunk.js",
     "static/media/Montserrat-SemiBold.ttf": "/pkp_intercity_react/static/media/Montserrat-SemiBold.04af9a9e62bb4c47bd55.ttf",
     "static/media/Montserrat-Medium.ttf": "/pkp_intercity_react/static/media/Montserrat-Medium.3a0917345468c959207a.ttf",
     "static/media/Montserrat-Bold.ttf": "/pkp_intercity_react/static/media/Montserrat-Bold.63fae500fdcf19ce83d4.ttf",
     "static/media/Montserrat-Regular.ttf": "/pkp_intercity_react/static/media/Montserrat-Regular.ac98a5f5ca71180fe293.ttf",
+    "static/media/glass.png": "/pkp_intercity_react/static/media/glass.8029ce425ae460a1bac6.png",
+    "static/media/calendar.png": "/pkp_intercity_react/static/media/calendar.d8fa16b48eb3f582bef8.png",
     "index.html": "/pkp_intercity_react/index.html",
     "main.26a2976c.css.map": "/pkp_intercity_react/static/css/main.26a2976c.css.map",
-    "main.e7ab6117.js.map": "/pkp_intercity_react/static/js/main.e7ab6117.js.map",
+    "main.b78af656.js.map": "/pkp_intercity_react/static/js/main.b78af656.js.map",
     "787.b1ff8b5a.chunk.js.map": "/pkp_intercity_react/static/js/787.b1ff8b5a.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.26a2976c.css",
-    "static/js/main.e7ab6117.js"
+    "static/js/main.b78af656.js"
   ]
 }
