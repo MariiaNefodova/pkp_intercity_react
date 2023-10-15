@@ -84,7 +84,7 @@ const TicketComponent = () => {
                     <Box
                         sx={{
                             width: 1,
-                            height: 300,
+                            height: 'fit-content',
                             border: 1,
                             borderColor: 'grey.300',
                             borderRadius: 1
