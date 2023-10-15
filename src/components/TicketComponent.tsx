@@ -2,18 +2,19 @@ import {
     Box,
     Button,
     Grid,
-    Link, Select, TextField,
+    IconButton,
+    Link,
     Typography
 } from "@mui/material";
-import React, {useState} from "react";
+import React from "react";
 import {useSelector} from "react-redux";
 import {ticketListSelector} from "../reducers/ticketReducer";
 import {FcGoogle} from "react-icons/fc";
 import {CgSoftwareUpload} from "react-icons/cg";
 import Avatar from '@mui/material/Avatar';
-import DeleteOutlineIcon from '@mui/icons-material/DeleteOutline';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
-import logo from '../logo/ic.png'
+import logo from '../icons/ic.png'
+import calendar from '../icons/calendar.png'
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 
@@ -25,8 +26,6 @@ const styles = {
         paddingRight: 0,
         width: '30px',
         height: '30px',
-        left: '20px',
-        marginRight: '10px'
     },
     typographyName: {
         paddingLeft: 3,
@@ -59,6 +58,15 @@ const styles = {
         '&:hover': {
             borderColor: 'black',
             backgroundColor: '#fff'
+        }
+    },
+    buttonAvatar: {
+        maxWidth: '40px',
+        maxHeight: '40px',
+        minWidth: '40px',
+        minHeight: '40px',
+        '&:hover': {
+            backgroundColor: 'transparent'
         }
     },
 
@@ -102,20 +110,26 @@ const TicketComponent = () => {
                                     </Typography>
                                 </Box>
                             </Grid>
-                            <Grid item container xs={5} paddingRight={2}
+                            <Grid item container xs={5} paddingRight={0}
                                   justifyContent="flex-end" alignItems={"center"}>
-                                <Link href="#" fontSize={14} color={"#02075d"} fontFamily={'MontBold'}>
+                                <Link href="#" fontSize={14} color={"#02075d"} fontFamily={'MontBold'} marginRight={'20px'}>
                                     TRASA TWOJEGO POCIĄGU
                                 </Link>
+                                <IconButton sx={styles.buttonAvatar}>
                                 <Avatar sx={styles.avatar}>
                                     <CgSoftwareUpload color={"#fc791e"} strokeWidth={1}/>
                                 </Avatar>
+                                </IconButton>
+                                <IconButton sx={styles.buttonAvatar}>
                                 <Avatar sx={styles.avatar}>
-                                    <DeleteOutlineIcon sx={{color: "#142458"}}/>
+                                    <img height={25} src={calendar} alt="Calendar"/>
                                 </Avatar>
-                                <Avatar sx={styles.avatar}>
+                                </IconButton>
+                                <IconButton sx={styles.buttonAvatar}>
+                                    <Avatar sx={styles.avatar}>
                                     <FcGoogle/>
                                 </Avatar>
+                                </IconButton>
                             </Grid>
                         </Grid>
                         <Grid container xs={12} spacing={2} paddingLeft={0} paddingRight={0}>

@@ -53,7 +53,7 @@ const Main = () => {
                 <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
                     <Tabs sx={{
                          '& .MuiTabs-indicator': { backgroundColor: '#142458' },
-                         '& .MuiTab-root': { color: 'lightgrey' },
+                         '& .MuiTab-root': { color: 'lightgrey', fontFamily: 'MontBold' },
                          '& .MuiTab-root.Mui-selected': { color: '#142458', fontFamily: 'MontBold'  },
                     }} value={value} onChange={handleChange}
                           >

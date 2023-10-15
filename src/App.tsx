@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes } from 'react-router-dom';
 import Main from "./views/main";
 
 function App() {

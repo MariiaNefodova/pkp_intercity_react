@@ -5,9 +5,9 @@ import {
  TextField,
 } from "@mui/material";
 import React from "react";
-import SearchIcon from '@mui/icons-material/Search';
 import TuneIcon from '@mui/icons-material/Tune';
 import AddIcon from '@mui/icons-material/Add';
+import glass from "../icons/glass.png";
 
 
 const SearchComponent = () => {
@@ -17,7 +17,7 @@ const SearchComponent = () => {
                 <Grid item xs={10} >
                     <TextField id="outlined-basic" label="Szukaj biletu" variant="outlined"
                                sx={{
-                                   fieldset: { borderColor: "grey.300" }
+                                   fieldset: { borderColor: "grey.300", fontSize: "1.2rem", }
                                }}
                                fullWidth
                                InputLabelProps={{
@@ -26,7 +26,7 @@ const SearchComponent = () => {
                                InputProps={{
                                    endAdornment: (
                                        <InputAdornment position="end">
-                                           <SearchIcon fontSize={"large"} style={{ color: "#142458" }}  />
+                                           <img height={30} src={glass} alt="glass"/>
                                        </InputAdornment>
                                    ),
                                }}/>
