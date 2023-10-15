@@ -1,8 +1,7 @@
-import {Box, Button, Tab, Tabs, Typography} from "@mui/material";
+import {Box, Tab, Tabs, Typography} from "@mui/material";
 import React from "react";
 import SearchComponent from "../components/SearchComponent";
 import TicketComponent from "../components/TicketComponent";
-import { styled } from '@mui/material/styles';
 
 
 interface TabPanelProps {
@@ -31,44 +30,11 @@ function CustomTabPanel(props: TabPanelProps) {
     );
 }
 
-const StyledTab = styled((props: StyledTabProps) => (
-    <Tab disableRipple {...props} />
-))(({ theme }) => ({
-    '&.Mui-selected': {
-        fontWeight: 'bold',
-        color: '#142458',
-    },
-}));
-
 function a11yProps(index: number) {
     return {
         id: `simple-tab-${index}`,
         'aria-controls': `simple-tabpanel-${index}`,
     };
-}
-
-const StyledTabs = styled((props: StyledTabsProps) => (
-    <Tabs
-        {...props}
-        TabIndicatorProps={{ children: <span className="MuiTabs-indicatorSpan" /> }}
-    />
-))({
-    '& .MuiTabs-indicator': {
-        backgroundColor: '#142458',
-    },
-    '& .MuiTabs-indicatorSpan': {
-        backgroundColor: '#142458',
-    },
-});
-
-interface StyledTabsProps {
-    children?: React.ReactNode;
-    value: number;
-    onChange: (event: React.SyntheticEvent, newValue: number) => void;
-}
-
-interface StyledTabProps {
-    label: string;
 }
 
 
@@ -79,19 +45,22 @@ const Main = () => {
         setValue(newValue);
     };
     return (
-        <><Typography fontSize={25} margin={2} fontFamily={"Segoe UI"}
+        <><Typography fontSize={25} margin={2} fontFamily={"MontBold"}
                      fontWeight={"bold"} color={"#142458"} >
             Moje bilety
         </Typography>
             <Box margin={2}>
                 <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
-                    <StyledTabs value={value} onChange={handleChange}
-                          aria-label="basic tabs example"
+                    <Tabs sx={{
+                         '& .MuiTabs-indicator': { backgroundColor: '#142458' },
+                         '& .MuiTab-root': { color: 'lightgrey' },
+                         '& .MuiTab-root.Mui-selected': { color: '#142458', fontFamily: 'MontBold'  },
+                    }} value={value} onChange={handleChange}
                           >
-                        <StyledTab  label="BILETY"  {...a11yProps(0)} />
+                        <Tab  label="BILETY"  {...a11yProps(0)} />
                         <Tab label="HISTORIA PODRÓŻY" {...a11yProps(1)} />
                         <Tab label="ZWRÓCONE" {...a11yProps(2)} />
-                    </StyledTabs>
+                    </Tabs>
                 </Box>
                 <CustomTabPanel value={value} index={0}>
                     <SearchComponent/>

@@ -1,8 +1,7 @@
-import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { createSlice } from '@reduxjs/toolkit';
 import {RootState} from "../store/store";
 import {TicketState} from "../interfaces/ticket";
 
-//Defining our initialState's type
 type initialStateType = {
     ticketList: TicketState[];
 };
@@ -15,7 +14,7 @@ const ticketList: TicketState[] = [
         class: '1',
         from: 'Warszawa Centr.',
         to: 'Kraków Gł.',
-        price: 189.00,
+        price: '189,00',
         trainNumber: 2620
     },
 ];
@@ -33,7 +32,6 @@ export const ticketSlice = createSlice({
     }
 });
 
-//Selector to access bookList state.
 export const ticketListSelector = (state: RootState) => state.ticket.ticketList;
 
 export default ticketSlice.reducer;

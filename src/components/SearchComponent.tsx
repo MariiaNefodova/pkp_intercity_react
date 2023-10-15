@@ -21,19 +21,24 @@ const SearchComponent = () => {
                                }}
                                fullWidth
                                InputLabelProps={{
-                                   style: { color: '#00bfff', fontSize: 16, fontWeight: "bold", borderColor: "#142458" },
+                                   style: { color: '#00bfff', fontSize: 16, fontFamily: 'MontBold', borderColor: "#142458" },
                                }}
                                InputProps={{
                                    endAdornment: (
                                        <InputAdornment position="end">
-                                           <SearchIcon style={{ color: "#142458" }}  />
+                                           <SearchIcon fontSize={"large"} style={{ color: "#142458" }}  />
                                        </InputAdornment>
                                    ),
                                }}/>
                 </Grid>
                 <Grid item xs={2} alignItems="stretch" style={{ display: "flex" }}>
-                    <Button fullWidth variant="outlined" style={{fontWeight: "bold", color: "#142458", fontSize: 18}}
-                            sx={{ borderColor: 'grey.300' }} endIcon={<TuneIcon style={{ color: "#142458" }} />}>
+                    <Button fullWidth variant="outlined"
+                            sx={{ borderColor: 'grey.300', fontFamily: 'MontBold', color: "#142458", fontSize: 18,
+                                '&:hover': {
+                                    borderColor: 'black',
+                                    backgroundColor: '#fff'
+                                }}}
+                            endIcon={<TuneIcon fontSize="large" style={{ color: "#142458" }} />}>
                         FILTRY
                     </Button>
                 </Grid>
@@ -46,7 +51,11 @@ const SearchComponent = () => {
                 justifyContent="flex-end"
             >
                 <Grid alignItems="center" style={{ display: "flex" }}>
-                    <Button fullWidth variant="text" style={{fontWeight: "bold", color: "#00bfff", fontSize: 17, borderColor: 'grey.300'}}
+                    <Button fullWidth variant="text" sx={{color: "#00bfff", fontSize: 16, fontFamily: "MontBold",
+                        '&:hover': {
+                            borderColor: 'black',
+                            backgroundColor: '#fff'
+                        }}}
                             startIcon={<AddIcon fontSize={"large"} style={{ color: "#fc791e"}}/>}>
                         DODAJ BILET OKRESOWY
                     </Button>
