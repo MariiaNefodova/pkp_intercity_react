@@ -1,4 +1,4 @@
-import {Box, Button, Tab, Tabs, Typography} from "@mui/material";
+import {Box, Tab, Tabs, Typography} from "@mui/material";
 import React from "react";
 import SearchComponent from "../components/SearchComponent";
 import TicketComponent from "../components/TicketComponent";
@@ -23,7 +23,7 @@ function CustomTabPanel(props: TabPanelProps) {
         >
             {value === index && (
                 <Box paddingBottom={3} paddingTop={3} paddingLeft={0} paddingRight={0}>
-                    <Typography>{children}</Typography>
+                    <Typography >{children}</Typography>
                 </Box>
             )}
         </div>
@@ -45,15 +45,19 @@ const Main = () => {
         setValue(newValue);
     };
     return (
-        <><Typography fontSize={25} margin={3} fontFamily={"Segoe UI"}
-                     fontWeight={"bold"} color={"navy"} >
+        <><Typography fontSize={25} margin={2} fontFamily={"MontBold"}
+                     fontWeight={"bold"} color={"#142458"} >
             Moje bilety
         </Typography>
-            <Box margin={3}>
+            <Box margin={2}>
                 <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
-                    <Tabs value={value} onChange={handleChange}
-                          aria-label="basic tabs example">
-                        <Tab label="Bilety"  {...a11yProps(0)} />
+                    <Tabs sx={{
+                         '& .MuiTabs-indicator': { backgroundColor: '#142458' },
+                         '& .MuiTab-root': { color: 'lightgrey' },
+                         '& .MuiTab-root.Mui-selected': { color: '#142458', fontFamily: 'MontBold'  },
+                    }} value={value} onChange={handleChange}
+                          >
+                        <Tab  label="BILETY"  {...a11yProps(0)} />
                         <Tab label="HISTORIA PODRÓŻY" {...a11yProps(1)} />
                         <Tab label="ZWRÓCONE" {...a11yProps(2)} />
                     </Tabs>
@@ -63,10 +67,10 @@ const Main = () => {
                     <TicketComponent/>
                 </CustomTabPanel>
                 <CustomTabPanel value={value} index={1}>
-                    Item Two
+                    HISTORIA PODRÓŻY
                 </CustomTabPanel>
                 <CustomTabPanel value={value} index={2}>
-                    Item Three
+                    ZWRÓCONE
                 </CustomTabPanel>
             </Box>
         </>

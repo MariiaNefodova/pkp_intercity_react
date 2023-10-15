@@ -5,6 +5,6 @@ export type TicketState = {
     class: string;
     from: string;
     to: string;
-    price: number;
+    price: string;
     trainNumber: number;
 };
